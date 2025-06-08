@@ -33,9 +33,9 @@ const Hero = () => {
   };
 
   const socialLinks = [
-    { name: 'GitHub', icon: FiGithub, url: 'https://github.com/yourusername' },
-    { name: 'LinkedIn', icon: FiLinkedin, url: 'https://linkedin.com/in/yourusername' },
-    { name: 'Twitter', icon: FiTwitter, url: 'https://twitter.com/yourusername' }
+    { name: 'GitHub', icon: FiGithub, url: 'https://github.com/mikec2611' },
+    { name: 'LinkedIn', icon: FiLinkedin, url: 'https://linkedin.com/in/mikec2611' },
+    { name: 'Twitter', icon: FiTwitter, url: 'https://twitter.com/mikec2611' }
   ];
 
   const scrollToContact = () => {
@@ -61,18 +61,19 @@ const Hero = () => {
             </motion.div>
 
             <motion.h1 className="hero__name" variants={itemVariants}>
-              <span className="hero__name-text">Your Name</span>
+              <span className="hero__name-text">Michael Cataliotti</span>
             </motion.h1>
 
             <motion.h2 className="hero__title" variants={itemVariants}>
-              <span className="hero__title-text">Full Stack Developer</span>
-              <span className="hero__title-accent"> & UI/UX Enthusiast</span>
+              <span className="hero__title-text">Senior Data Analytics Leader</span>
+              <span className="hero__title-accent"> & Software Engineer</span>
             </motion.h2>
 
             <motion.p className="hero__description" variants={itemVariants}>
-              I'm a passionate full-stack developer with 5+ years of experience creating 
-              beautiful, functional, and user-centered digital experiences. I specialize in 
-              modern web technologies and love turning complex problems into simple, elegant solutions.
+              Accomplished data analytics leader and engineer with 10+ years of hands-on expertise 
+              building enterprise business intelligence applications, dashboards, and reports. 
+              Proven track record of leading high-impact analytics initiatives, managing technical teams, 
+              and delivering strategic outcomes through data-driven solutions.
             </motion.p>
 
             <motion.div className="hero__actions" variants={itemVariants}>
@@ -129,7 +130,7 @@ const Hero = () => {
               <div className="hero__image">
                 <img 
                   src="/api/placeholder/400/400" 
-                  alt="Your Name - Professional headshot"
+                  alt="Michael Cataliotti - Professional headshot"
                   className="hero__image-photo"
                 />
                 <div className="hero__image-overlay"></div>
@@ -148,8 +149,8 @@ const Hero = () => {
                 }}
               >
                 <div className="hero__card-content">
-                  <span className="hero__card-number">50+</span>
-                  <span className="hero__card-label">Projects</span>
+                  <span className="hero__card-number">10+</span>
+                  <span className="hero__card-label">Years Exp</span>
                 </div>
               </motion.div>
 
@@ -167,8 +168,8 @@ const Hero = () => {
                 }}
               >
                 <div className="hero__card-content">
-                  <span className="hero__card-number">5+</span>
-                  <span className="hero__card-label">Years Exp</span>
+                  <span className="hero__card-number">13+</span>
+                  <span className="hero__card-label">Team Members</span>
                 </div>
               </motion.div>
 
@@ -186,8 +187,8 @@ const Hero = () => {
                 }}
               >
                 <div className="hero__card-content">
-                  <span className="hero__card-number">100%</span>
-                  <span className="hero__card-label">Remote</span>
+                  <span className="hero__card-number">$5B+</span>
+                  <span className="hero__card-label">Value Created</span>
                 </div>
               </motion.div>
             </motion.div>
