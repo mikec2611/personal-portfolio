@@ -237,41 +237,7 @@ const Education = () => {
             </div>
           </motion.div>
 
-          {/* Education Summary */}
-          <motion.div className="education-summary" variants={itemVariants}>
-            <h3 className="education-summary-title">Learning Journey Highlights</h3>
-            <div className="education-summary-stats">
-              <div className="education-stat">
-                <FiTrendingUp className="education-stat-icon" />
-                <div className="education-stat-content">
-                  <span className="education-stat-number">4</span>
-                  <span className="education-stat-label">Certifications</span>
-                </div>
-              </div>
-              <div className="education-stat">
-                <FiTarget className="education-stat-icon" />
-                <div className="education-stat-content">
-                  <span className="education-stat-number">6+</span>
-                  <span className="education-stat-label">Years of Continuous Learning</span>
-                </div>
-              </div>
-              <div className="education-stat">
-                <FiBookOpen className="education-stat-icon" />
-                <div className="education-stat-content">
-                  <span className="education-stat-number">3</span>
-                  <span className="education-stat-label">Major Platforms</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="education-summary-text">
-              <p>
-                My educational journey reflects a commitment to staying at the forefront of data analytics and technology. 
-                From foundational economic principles to cutting-edge data engineering and leadership skills, 
-                I continuously invest in learning to drive innovation and excellence in my professional work.
-              </p>
-            </div>
-          </motion.div>
+
         </motion.div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiExternalLink, FiGithub, FiPlay, FiCode, FiDatabase, FiMap, FiTrendingUp, FiGlobe, FiCalendar, FiUsers, FiStar } from 'react-icons/fi';
+import { FiExternalLink, FiGithub, FiPlay, FiCode, FiMap, FiTrendingUp, FiStar, FiGlobe, FiMonitor } from 'react-icons/fi';
 import { useInView } from 'react-intersection-observer';
 import './Projects.css';
 
@@ -58,13 +58,37 @@ const Projects = () => {
       status: 'live',
       featured: true,
       color: '#3b82f6'
+    },
+    {
+      id: 3,
+      title: 'Personal Portfolio Website',
+      subtitle: 'Modern React Portfolio with Advanced Features',
+      description: 'A sophisticated personal portfolio website built with React, featuring modern animations, dark mode support, responsive design, and comprehensive skills showcase with interactive filtering.',
+      longDescription: 'This portfolio demonstrates advanced front-end development skills through a modern React application featuring smooth animations, professional design, and interactive components. Built with performance and accessibility in mind.',
+      category: 'web',
+      tags: ['React', 'JavaScript', 'CSS3', 'HTML5', 'Framer Motion', 'React Icons', 'GitHub Pages'],
+      liveUrl: 'https://mikec2611.github.io/personal-portfolio',
+      githubUrl: 'https://github.com/mikec2611/personal-portfolio',
+      image: '/api/placeholder/600/400',
+      features: [
+        'Modern React 18 with functional components and hooks',
+        'Framer Motion animations and smooth transitions',
+        'Dark/Light mode toggle with localStorage persistence',
+        'Responsive design optimized for all device sizes',
+        'Interactive skills filtering and categorization',
+        'Professional project showcase with detailed descriptions'
+      ],
+      status: 'live',
+      featured: true,
+      color: '#7c3aed'
     }
   ];
 
   const categories = [
     { id: 'all', label: 'All Projects', icon: FiCode },
     { id: 'ai', label: 'AI', icon: FiTrendingUp },
-    { id: 'visualization', label: 'Data Viz', icon: FiMap }
+    { id: 'visualization', label: 'Data Viz', icon: FiMap },
+    { id: 'web', label: 'Web Dev', icon: FiMonitor }
   ];
 
   const filteredProjects = activeFilter === 'all' 

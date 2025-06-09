@@ -76,6 +76,10 @@
   box-shadow: var(--shadow-lg);
 }
 
+.skills-filter:not(.active) {
+  border-left: 4px solid var(--category-color, var(--primary-color));
+}
+
 .skills-filter svg {
   font-size: var(--text-base);
 }
@@ -93,8 +97,8 @@
 /* Skills Grid */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: var(--spacing-6);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-4);
   margin-bottom: var(--spacing-16);
 }
 
@@ -109,6 +113,24 @@
   overflow: hidden;
 }
 
+.skill-card--compact {
+  padding: var(--spacing-4);
+  border-radius: var(--radius-lg);
+}
+
+.skill-card--compact .skill-info {
+  text-align: center;
+}
+
+.skill-card--compact .skill-name {
+  font-size: var(--text-base);
+  margin-bottom: var(--spacing-1);
+}
+
+.skill-card--compact .skill-experience {
+  font-size: var(--text-xs);
+}
+
 .skill-card::before {
   content: '';
   position: absolute;
@@ -117,13 +139,13 @@
   right: 0;
   height: 4px;
   background: var(--skill-color, var(--primary-color));
-  transform: scaleX(0);
+  transform: scaleX(1);
   transform-origin: left;
-  transition: transform var(--transition-base);
+  transition: all var(--transition-base);
 }
 
 .skill-card:hover::before {
-  transform: scaleX(1);
+  height: 6px;
 }
 
 .skill-card:hover {
@@ -327,6 +349,40 @@
   margin-bottom: var(--spacing-8);
 }
 
+.competency-group {
+  margin-bottom: var(--spacing-12);
+}
+
+.competency-group:last-child {
+  margin-bottom: 0;
+}
+
+.competency-group-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: var(--spacing-6);
+  text-align: center;
+  position: relative;
+  padding-bottom: var(--spacing-3);
+}
+
+.competency-group-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: var(--radius-full);
+}
+
+[data-theme="dark"] .competency-group-title {
+  color: var(--gray-200);
+}
+
 .tech-highlights-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -394,8 +450,8 @@
   }
 
   .skills-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-4);
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: var(--spacing-3);
   }
 
   .skill-card {
