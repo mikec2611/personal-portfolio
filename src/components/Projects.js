@@ -23,7 +23,7 @@ const Projects = () => {
       tags: ['Python', 'JavaScript', 'CSS', 'HTML', 'Flask', 'OpenAI API', 'YouTube API', 'OpenWeatherMap API'],
       liveUrl: 'https://www.earthsearch.ai',
       githubUrl: '#',
-      image: '/api/placeholder/600/400',
+      image: `${process.env.PUBLIC_URL}/images/earthsearch-screenshot.jpg`,
       features: [
         'AI-powered location information and insights',
         'Historical facts and cultural knowledge',
@@ -46,7 +46,7 @@ const Projects = () => {
       tags: ['Python', 'JavaScript', 'CSS', 'HTML', 'Flask', 'Mapbox', 'COVID-19 Data (NYT)'],
       liveUrl: 'https://uscovidmap.io',
       githubUrl: '#',
-      image: '/api/placeholder/600/400',
+      image: `${process.env.PUBLIC_URL}/images/uscovidmap-screenshot.jpg`,
       features: [
         'Interactive county-level COVID-19 maps',
         'Time-series visualization and playback',
@@ -67,9 +67,9 @@ const Projects = () => {
       longDescription: 'This portfolio demonstrates advanced front-end development skills through a modern React application featuring smooth animations, professional design, and interactive components. Built with performance and accessibility in mind.',
       category: 'web',
       tags: ['React', 'JavaScript', 'CSS3', 'HTML5', 'Framer Motion', 'React Icons', 'GitHub Pages'],
-      liveUrl: 'https://mikec2611.github.io/personal-portfolio',
-      githubUrl: 'https://github.com/mikec2611/personal-portfolio',
-      image: '/api/placeholder/600/400',
+      liveUrl: '#',
+      githubUrl: '#',
+      image: null,
       features: [
         'Modern React 18 with functional components and hooks',
         'Framer Motion animations and smooth transitions',
@@ -81,6 +81,29 @@ const Projects = () => {
       status: 'live',
       featured: true,
       color: '#7c3aed'
+    },
+    {
+      id: 4,
+      title: 'Job Application Tracker',
+      subtitle: 'AI-Powered Gmail Integration for Job Search Management',
+      description: 'An intelligent Python application that automatically connects to Gmail, identifies job application emails, and provides comprehensive organization and visualization of job search activities using AI-powered analysis.',
+      longDescription: 'This automation tool streamlines job search management by intelligently parsing Gmail data to track application submissions, responses, and follow-ups. Leveraging OpenAI API for smart categorization and Python for robust data processing, it transforms email chaos into actionable insights.',
+      category: 'ai',
+      tags: ['Python', 'Gmail API', 'OpenAI API', 'Data Visualization', 'Automation', 'Email Processing'],
+      liveUrl: '#',
+      githubUrl: '#',
+      image: null,
+      features: [
+        'Automated Gmail integration with secure API authentication',
+        'AI-powered email classification and job application detection',
+        'Smart organization of applications by company, role, and status',
+        'Interactive visualizations of job search progress and metrics',
+        'Automated tracking of response rates and timeline analysis',
+        'Export capabilities for further analysis and reporting'
+      ],
+      status: 'completed',
+      featured: true,
+      color: '#ef4444'
     }
   ];
 
@@ -119,26 +142,63 @@ const Projects = () => {
 
   const ProjectCard = ({ project }) => (
     <motion.div
-      className={`project-card ${project.featured ? 'project-card--featured' : ''}`}
+      className={`project-card ${project.featured ? 'project-card--featured' : ''} ${!project.image ? 'project-card--no-image' : ''}`}
       variants={itemVariants}
       whileHover={{ y: -8 }}
       transition={{ duration: 0.3 }}
       style={{ '--project-color': project.color }}
     >
-      <div className="project-image">
-        <img src={project.image} alt={project.title} />
-        <div className="project-overlay">
-          <div className="project-actions">
-            <a 
-              href={project.liveUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="project-action project-action--primary"
-              title="View Live Demo"
-            >
-              <FiExternalLink />
-              <span>Live Demo</span>
-            </a>
+      {project.image ? (
+        <div className="project-image">
+          <img src={project.image} alt={project.title} />
+          <div className="project-overlay">
+            <div className="project-actions">
+              <a 
+                href={project.liveUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="project-action project-action--primary"
+                title="View Live Demo"
+              >
+                <FiExternalLink />
+                <span>Live Demo</span>
+              </a>
+              {project.githubUrl !== '#' && (
+                <a 
+                  href={project.githubUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="project-action project-action--secondary"
+                  title="View Source Code"
+                >
+                  <FiGithub />
+                  <span>Code</span>
+                </a>
+              )}
+            </div>
+            <div className="project-status">
+              <span className={`project-status-badge project-status-badge--${project.status}`}>
+                <FiPlay />
+                {project.status === 'live' ? 'Live' : 'In Development'}
+              </span>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className="project-header-section">
+          <div className="project-actions-top">
+            {project.liveUrl !== '#' && (
+              <a 
+                href={project.liveUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="project-action project-action--primary"
+                title="View Live Demo"
+              >
+                <FiExternalLink />
+                <span>Live Demo</span>
+              </a>
+            )}
             {project.githubUrl !== '#' && (
               <a 
                 href={project.githubUrl} 
@@ -152,14 +212,14 @@ const Projects = () => {
               </a>
             )}
           </div>
-          <div className="project-status">
+          <div className="project-status-top">
             <span className={`project-status-badge project-status-badge--${project.status}`}>
               <FiPlay />
               {project.status === 'live' ? 'Live' : 'In Development'}
             </span>
           </div>
         </div>
-      </div>
+      )}
 
       <div className="project-content">
         <div className="project-header">
@@ -250,29 +310,30 @@ const Projects = () => {
                 <div className="projects-summary-stat">
                   <FiGlobe className="projects-summary-icon" />
                   <div className="projects-summary-stat-content">
-                    <span className="projects-summary-number">2</span>
-                    <span className="projects-summary-label">Live Applications</span>
+                    <span className="projects-summary-number">4</span>
+                    <span className="projects-summary-label">Total Projects</span>
                   </div>
                 </div>
                 <div className="projects-summary-stat">
                   <FiCode className="projects-summary-icon" />
                   <div className="projects-summary-stat-content">
-                    <span className="projects-summary-number">7+</span>
+                    <span className="projects-summary-number">10+</span>
                     <span className="projects-summary-label">Technologies Used</span>
                   </div>
                 </div>
                 <div className="projects-summary-stat">
                   <FiTrendingUp className="projects-summary-icon" />
                   <div className="projects-summary-stat-content">
-                    <span className="projects-summary-number">2</span>
+                    <span className="projects-summary-number">3</span>
                     <span className="projects-summary-label">Different Domains</span>
                   </div>
                 </div>
               </div>
               <p className="projects-summary-text">
-                These projects demonstrate my ability to architect and develop full-stack applications 
-                that handle complex data processing, provide intuitive user experiences, and deliver 
-                meaningful insights to users across various domains.
+                These projects showcase my expertise in AI integration, data visualization, and 
+                full-stack development. From interactive mapping applications to AI-powered tools 
+                and modern web development, each project demonstrates technical excellence and 
+                user-focused design across diverse domains.
               </p>
             </div>
           </motion.div>

@@ -129,7 +129,7 @@ const Hero = () => {
             >
               <div className="hero__image">
                 <img 
-                  src="/api/placeholder/400/400" 
+                  src={`${process.env.PUBLIC_URL}/images/profile/headshot.jpg`} 
                   alt="Michael Cataliotti - Professional headshot"
                   className="hero__image-photo"
                 />

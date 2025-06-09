@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiAward, FiBookOpen, FiCalendar, FiMapPin, FiExternalLink, FiUser, FiTrendingUp, FiTarget } from 'react-icons/fi';
+import { FiAward, FiBookOpen, FiCalendar, FiMapPin, FiExternalLink, FiUser } from 'react-icons/fi';
 import { useInView } from 'react-intersection-observer';
 import './Education.css';
 

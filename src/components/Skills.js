@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiCode, FiDatabase, FiCpu, FiLayers, FiMonitor, FiBarChart2, FiSettings, FiUsers, FiBriefcase, FiTool, FiTrendingUp, FiTarget, FiUserCheck } from 'react-icons/fi';
+import { FiCode, FiDatabase, FiCpu, FiLayers, FiMonitor, FiBarChart2, FiSettings, FiUsers, FiBriefcase, FiTool, FiTrendingUp, FiUserCheck } from 'react-icons/fi';
 import { useInView } from 'react-intersection-observer';
 import './Skills.css';
 
@@ -236,24 +236,24 @@ const Skills = () => {
           <motion.div className="skills-summary" variants={itemVariants}>
             <div className="skills-summary-stats">
               <div className="skills-stat">
-                <div className="skills-stat-number">25+</div>
+                <div className="skills-stat-number">40+</div>
                 <div className="skills-stat-label">Technologies</div>
+              </div>
+              <div className="skills-stat">
+                <div className="skills-stat-number">10+</div>
+                <div className="skills-stat-label">Leadership Skills</div>
               </div>
               <div className="skills-stat">
                 <div className="skills-stat-number">10+</div>
                 <div className="skills-stat-label">Years Experience</div>
               </div>
-              <div className="skills-stat">
-                <div className="skills-stat-number">6</div>
-                <div className="skills-stat-label">Specialization Areas</div>
-              </div>
             </div>
             
             <div className="skills-summary-text">
               <p>
-                Specialized in building enterprise-scale data analytics solutions with modern technology stacks. 
-                Experienced in leading teams through full software development lifecycles, from architecture design 
-                to deployment and maintenance. Passionate about leveraging AI and automation to solve complex business problems.
+                Comprehensive expertise spanning technical excellence and leadership capabilities. 
+                From cutting-edge AI integration and data engineering to strategic team management and project execution, 
+                I deliver end-to-end solutions that drive business value and organizational success.
               </p>
             </div>
           </motion.div>
