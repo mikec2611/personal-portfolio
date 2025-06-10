@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiDownload, FiMail, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import { FiDownload, FiGithub, FiLinkedin } from 'react-icons/fi';
 import { useInView } from 'react-intersection-observer';
 import './Hero.css';
 
@@ -34,16 +34,10 @@ const Hero = () => {
 
   const socialLinks = [
     { name: 'GitHub', icon: FiGithub, url: 'https://github.com/mikec2611' },
-    { name: 'LinkedIn', icon: FiLinkedin, url: 'https://linkedin.com/in/mikec2611' },
-    { name: 'Twitter', icon: FiTwitter, url: 'https://twitter.com/mikec2611' }
+    { name: 'LinkedIn', icon: FiLinkedin, url: 'https://linkedin.com/in/mikec2611' }
   ];
 
-  const scrollToContact = () => {
-    const element = document.querySelector('#contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+
 
   return (
     <section id="hero" className="hero">
@@ -65,8 +59,7 @@ const Hero = () => {
             </motion.h1>
 
             <motion.h2 className="hero__title" variants={itemVariants}>
-              <span className="hero__title-text">Senior Data Analytics Leader</span>
-              <span className="hero__title-accent"> & Software Engineer</span>
+              <span className="hero__title-text">Data Analytics Professional</span>
             </motion.h2>
 
             <motion.p className="hero__description" variants={itemVariants}>
@@ -77,16 +70,9 @@ const Hero = () => {
             </motion.p>
 
             <motion.div className="hero__actions" variants={itemVariants}>
-              <button 
-                className="btn btn-primary btn-lg hero__cta"
-                onClick={scrollToContact}
-              >
-                <FiMail />
-                Get In Touch
-              </button>
               <a 
                 href="/resume.pdf" 
-                className="btn btn-secondary btn-lg hero__resume"
+                className="btn btn-primary btn-lg hero__resume"
                 download
                 target="_blank"
                 rel="noopener noreferrer"
@@ -120,79 +106,7 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          <div className="hero__visual">
-            <motion.div 
-              className="hero__image-container"
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="hero__image">
-                <img 
-                  src={`${process.env.PUBLIC_URL}/images/profile/headshot.jpg`} 
-                  alt="Michael Cataliotti - Professional headshot"
-                  className="hero__image-photo"
-                />
-                <div className="hero__image-overlay"></div>
-              </div>
-              
-              <motion.div 
-                className="hero__floating-card hero__floating-card--1"
-                animate={{ 
-                  y: [0, -10, 0],
-                  rotate: [0, 2, 0]
-                }}
-                transition={{ 
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                <div className="hero__card-content">
-                  <span className="hero__card-number">10+</span>
-                  <span className="hero__card-label">Years Exp</span>
-                </div>
-              </motion.div>
 
-              <motion.div 
-                className="hero__floating-card hero__floating-card--2"
-                animate={{ 
-                  y: [0, 10, 0],
-                  rotate: [0, -2, 0]
-                }}
-                transition={{ 
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1
-                }}
-              >
-                <div className="hero__card-content">
-                  <span className="hero__card-number">13+</span>
-                  <span className="hero__card-label">Team Members</span>
-                </div>
-              </motion.div>
-
-              <motion.div 
-                className="hero__floating-card hero__floating-card--3"
-                animate={{ 
-                  y: [0, -8, 0],
-                  rotate: [0, 1, 0]
-                }}
-                transition={{ 
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 2
-                }}
-              >
-                <div className="hero__card-content">
-                  <span className="hero__card-number">$5B+</span>
-                  <span className="hero__card-label">Value Created</span>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
         </motion.div>
 
         <motion.div 

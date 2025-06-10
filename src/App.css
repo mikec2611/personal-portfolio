@@ -1,27 +1,41 @@
 /* Global Variables */
 :root {
-  /* Colors */
-  --primary-color: #2563eb;
-  --primary-dark: #1d4ed8;
-  --primary-light: #3b82f6;
-  --secondary-color: #64748b;
-  --accent-color: #f59e0b;
-  --success-color: #10b981;
-  --warning-color: #f59e0b;
-  --error-color: #ef4444;
+  /* Tech Theme - Flat Professional Palette */
+  --primary-color: #1a202c;      /* Deep tech navy */
+  --primary-dark: #0f1419;       /* Darker navy for hovers */
+  --primary-light: #2d3748;      /* Lighter tech gray */
+  --secondary-color: #4a5568;     /* Tech gray */
+  --accent-color: #00d4ff;       /* Electric cyan - tech highlight */
+  --accent-warm: #ff6b35;        /* Tech orange for contrast */
+  --accent-green: #00f5a0;       /* Terminal green */
+  --success-color: #48bb78;      /* Flat green */
+  --warning-color: #ed8936;      /* Flat orange */
+  --error-color: #f56565;        /* Flat red */
 
-  /* Neutral Colors */
+  /* Light Theme Neutral Colors */
   --white: #ffffff;
-  --gray-50: #f8fafc;
-  --gray-100: #f1f5f9;
-  --gray-200: #e2e8f0;
-  --gray-300: #cbd5e1;
-  --gray-400: #94a3b8;
-  --gray-500: #64748b;
-  --gray-600: #475569;
-  --gray-700: #334155;
-  --gray-800: #1e293b;
-  --gray-900: #0f172a;
+  --gray-50: #f8fafc;            /* Lightest background */
+  --gray-100: #f1f5f9;          /* Card backgrounds */
+  --gray-200: #e2e8f0;          /* Borders light */
+  --gray-300: #cbd5e1;          /* Borders medium */
+  --gray-400: #94a3b8;          /* Text muted */
+  --gray-500: #64748b;          /* Text secondary */
+  --gray-600: #475569;          /* Text primary light */
+  --gray-700: #334155;          /* Headings light */
+  --gray-800: #1e293b;          /* Dark text */
+  --gray-900: #0f172a;          /* Darkest text */
+
+  /* Additional professional tones */
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
 
   /* Typography */
   --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
@@ -82,22 +96,46 @@
   --container-2xl: 1536px;
 }
 
-/* Dark Mode Variables */
+/* Dark Mode Variables - Tech Dark Theme */
 [data-theme="dark"] {
-  --primary-color: #60a5fa;
-  --primary-dark: #3b82f6;
-  --primary-light: #93c5fd;
-  --white: var(--gray-900);
-  --gray-50: var(--gray-800);
-  --gray-100: var(--gray-700);
-  --gray-200: var(--gray-600);
-  --gray-300: var(--gray-500);
-  --gray-400: var(--gray-400);
-  --gray-500: var(--gray-300);
-  --gray-600: var(--gray-200);
-  --gray-700: var(--gray-100);
-  --gray-800: var(--gray-50);
-  --gray-900: #ffffff;
+  /* Tech dark mode colors - flat and modern */
+  --primary-color: #00d4ff;      /* Electric cyan as primary in dark */
+  --primary-dark: #00b8e6;       /* Darker cyan for hovers */
+  --primary-light: #33ddff;      /* Lighter cyan for accents */
+  --accent-color: #00f5a0;       /* Terminal green accent */
+  --accent-warm: #ff8c42;        /* Bright tech orange */
+
+  /* Dark theme background system - tech inspired */
+  --white: #0a0e14;              /* Deep tech background */
+  --gray-50: #1a202c;            /* Secondary background */
+  --gray-100: #2d3748;          /* Card backgrounds */
+  --gray-200: #4a5568;          /* Elevated surfaces */
+  --gray-300: #718096;          /* Borders and dividers */
+  --gray-400: #a0aec0;          /* Muted text */
+  --gray-500: #cbd5e0;          /* Secondary text */
+  --gray-600: #e2e8f0;          /* Primary text */
+  --gray-700: #f7fafc;          /* Headings */
+  --gray-800: #ffffff;          /* High contrast text */
+  --gray-900: #ffffff;          /* Maximum contrast */
+
+  /* Dark theme slate system - tech colors */
+  --slate-50: #0a0e14;          /* Deepest tech background */
+  --slate-100: #1a202c;         /* Panel backgrounds */
+  --slate-200: #2d3748;         /* Card surfaces */
+  --slate-300: #4a5568;         /* Interactive surfaces */
+  --slate-400: #718096;         /* Subtle borders */
+  --slate-500: #a0aec0;         /* Text muted */
+  --slate-600: #cbd5e0;         /* Text secondary */
+  --slate-700: #e2e8f0;         /* Text primary */
+  --slate-800: #f7fafc;         /* Headings */
+  --slate-900: #ffffff;         /* High contrast */
+
+  /* Dark mode specific additions - tech surfaces */
+  --surface-primary: #1a202c;    /* Primary surface color */
+  --surface-secondary: #2d3748;  /* Secondary surface color */
+  --surface-elevated: #4a5568;   /* Elevated/hover surfaces */
+  --border-subtle: #2d3748;      /* Subtle borders */
+  --border-default: #4a5568;     /* Default borders */
 }
 
 /* Reset and Base Styles */
@@ -192,12 +230,58 @@ a:hover {
   content: '';
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  background: var(--accent-color);
   border-radius: var(--radius-full);
   position: absolute;
   bottom: -var(--spacing-3);
   left: 50%;
   transform: translateX(-50%);
+}
+
+/* Flat tech design elements */
+.tech-primary {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.tech-accent {
+  background: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.tech-text-highlight {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* Tech-inspired flat borders */
+.tech-border {
+  border: 2px solid var(--accent-color);
+}
+
+.tech-border-subtle {
+  border: 1px solid var(--border-default);
+}
+
+/* Tech glow effects (subtle) */
+.tech-glow {
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+}
+
+[data-theme="dark"] .tech-glow {
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.15);
+}
+
+/* Flat card enhancements */
+.tech-card {
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+}
+
+[data-theme="dark"] .tech-card {
+  background: var(--surface-secondary);
+  border-color: var(--border-subtle);
 }
 
 /* Buttons */
@@ -240,6 +324,32 @@ a:hover {
   transform: translateY(-2px);
 }
 
+/* Flat tech button styles for dark mode */
+[data-theme="dark"] .btn-primary {
+  background: var(--primary-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--primary-color);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  box-shadow: 0 4px 8px rgba(0, 212, 255, 0.3);
+  color: var(--white);
+}
+
+[data-theme="dark"] .btn-secondary {
+  background-color: transparent;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white);
+}
+
 .btn-lg {
   padding: var(--spacing-4) var(--spacing-8);
   font-size: var(--text-lg);
@@ -252,11 +362,24 @@ a:hover {
   box-shadow: var(--shadow-md);
   padding: var(--spacing-6);
   transition: all var(--transition-base);
+  border: 1px solid var(--gray-200);
 }
 
 .card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-xl);
+}
+
+/* Enhanced card styles for dark mode */
+[data-theme="dark"] .card {
+  background: var(--surface-secondary);
+  border-color: var(--border-subtle);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .card:hover {
+  background: var(--surface-elevated);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.4);
 }
 
 /* Responsive Grid */

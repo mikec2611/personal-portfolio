@@ -19,9 +19,14 @@ const Header = () => {
 
   useEffect(() => {
     const theme = localStorage.getItem('theme');
-    if (theme === 'dark') {
+    if (theme === 'light') {
+      setIsDarkMode(false);
+      document.documentElement.removeAttribute('data-theme');
+    } else {
+      // Default to dark mode
       setIsDarkMode(true);
       document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
     }
   }, []);
 
@@ -43,8 +48,7 @@ const Header = () => {
     { name: 'Experience', href: '#work' },
     { name: 'Education', href: '#education' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Projects', href: '#projects' }
   ];
 
   const scrollToSection = (href) => {
