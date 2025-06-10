@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiDownload, FiGithub, FiLinkedin } from 'react-icons/fi';
+import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import { useInView } from 'react-intersection-observer';
 import './Hero.css';
 
@@ -55,7 +55,7 @@ const Hero = () => {
             </motion.h1>
 
             <motion.h2 className="hero__title" variants={itemVariants}>
-              <span className="hero__title-text">Data Analytics & Engineering Professional</span>
+              <span className="hero__title-text">Data Analytics & Software Engineering Professional</span>
             </motion.h2>
 
 

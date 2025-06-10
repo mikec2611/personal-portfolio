@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { FiExternalLink, FiGithub, FiCode, FiMap, FiTrendingUp, FiStar, FiGlobe, FiMonitor } from 'react-icons/fi';
+import { FiExternalLink, FiGithub } from 'react-icons/fi';
 import { useInView } from 'react-intersection-observer';
 import './Projects.css';
 
@@ -10,15 +10,12 @@ const Projects = () => {
     threshold: 0.1,
   });
 
-  const [activeFilter, setActiveFilter] = useState('all');
-
   const projects = [
     {
       id: 1,
       title: 'EarthSearch.ai',
       subtitle: 'AI-Powered Location Information Platform',
       description: 'An intelligent platform that provides comprehensive location information including history, landmarks, culture, and local insights powered by AI, along with weather forecasts for any location worldwide.',
-      longDescription: 'EarthSearch.ai leverages artificial intelligence to deliver rich, contextual information about any location on Earth. Users can discover fascinating historical facts, cultural insights, notable landmarks, and local knowledge, complemented by accurate weather forecasting capabilities.',
       category: 'ai',
       tags: ['Python', 'JavaScript', 'CSS', 'HTML', 'Flask', 'OpenAI API', 'YouTube API', 'OpenWeatherMap API'],
       liveUrl: 'https://www.earthsearch.ai',
@@ -41,10 +38,9 @@ const Projects = () => {
       title: 'USCovidMap.io',
       subtitle: 'Interactive COVID-19 Data Visualization',
       description: 'An interactive map platform providing comprehensive visualization of US COVID-19 data over time, featuring county-level statistics and temporal analysis.',
-      longDescription: 'USCovidMap.io offers detailed insights into the COVID-19 pandemic across the United States through interactive maps, charts, and timeline visualizations. Users can explore data at multiple geographic levels and track trends over time.',
       category: 'visualization',
       tags: ['Python', 'JavaScript', 'CSS', 'HTML', 'Flask', 'Mapbox', 'COVID-19 Data (NYT)'],
-      liveUrl: 'https://uscovidmap.io',
+      liveUrl: 'https://www.uscovidmap.io',
       githubUrl: '#',
       image: `${process.env.PUBLIC_URL}/images/uscovidmap-screenshot.jpg`,
       features: [
@@ -64,7 +60,6 @@ const Projects = () => {
       title: 'Personal Portfolio Website',
       subtitle: 'Modern React Portfolio with Advanced Features',
       description: 'A sophisticated personal portfolio website built with React, featuring modern animations, dark mode support, responsive design, and comprehensive skills showcase with interactive filtering.',
-      longDescription: 'This portfolio demonstrates advanced front-end development skills through a modern React application featuring smooth animations, professional design, and interactive components. Built with performance and accessibility in mind.',
       category: 'web',
       tags: ['React', 'JavaScript', 'CSS3', 'HTML5', 'Framer Motion', 'React Icons', 'GitHub Pages'],
       liveUrl: '#',
@@ -87,7 +82,6 @@ const Projects = () => {
       title: 'Job Application Tracker',
       subtitle: 'AI-Powered Gmail Integration for Job Search Management',
       description: 'An intelligent Python application that automatically connects to Gmail, identifies job application emails, and provides comprehensive organization and visualization of job search activities using AI-powered analysis.',
-      longDescription: 'This automation tool streamlines job search management by intelligently parsing Gmail data to track application submissions, responses, and follow-ups. Leveraging OpenAI API for smart categorization and Python for robust data processing, it transforms email chaos into actionable insights.',
       category: 'ai',
       tags: ['Python', 'Gmail API', 'OpenAI API', 'Data Visualization', 'Automation', 'Email Processing'],
       liveUrl: '#',
@@ -107,16 +101,7 @@ const Projects = () => {
     }
   ];
 
-  const categories = [
-    { id: 'all', label: 'All Projects', icon: FiCode },
-    { id: 'ai', label: 'AI', icon: FiTrendingUp },
-    { id: 'visualization', label: 'Data Viz', icon: FiMap },
-    { id: 'web', label: 'Web Dev', icon: FiMonitor }
-  ];
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -232,7 +217,7 @@ const Projects = () => {
             variants={itemVariants}
             layout
           >
-            {filteredProjects.map((project) => (
+            {projects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </motion.div>
