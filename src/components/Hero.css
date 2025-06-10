@@ -26,13 +26,14 @@
 }
 
 .hero__content {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-12);
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 
 /* Text Content */

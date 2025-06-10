@@ -68,16 +68,7 @@ const Header = () => {
     >
       <div className="container">
         <div className="header__content">
-          {/* Logo */}
-          <motion.div 
-            className="header__logo"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <a href="#hero" onClick={(e) => { e.preventDefault(); scrollToSection('#hero'); }}>
-              <span className="header__logo-text">Portfolio</span>
-            </a>
-          </motion.div>
+
 
           {/* Desktop Navigation */}
           <nav className="header__nav">

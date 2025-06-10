@@ -50,10 +50,6 @@ const Hero = () => {
           animate={inView ? "visible" : "hidden"}
         >
           <div className="hero__text">
-            <motion.div className="hero__greeting" variants={itemVariants}>
-              <span className="hero__greeting-text">Hello, I'm</span>
-            </motion.div>
-
             <motion.h1 className="hero__name" variants={itemVariants}>
               <span className="hero__name-text">Michael Cataliotti</span>
             </motion.h1>
@@ -126,7 +122,7 @@ const Hero = () => {
           >
             ↓
           </motion.div>
-          <span className="hero__scroll-text">Scroll to explore</span>
+          <span className="hero__scroll-text">Scroll for more</span>
         </motion.div>
       </div>
     </section>

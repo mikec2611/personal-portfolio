@@ -184,42 +184,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-      ) : (
-        <div className="project-header-section">
-          <div className="project-actions-top">
-            {project.liveUrl !== '#' && (
-              <a 
-                href={project.liveUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="project-action project-action--primary"
-                title="View Live Demo"
-              >
-                <FiExternalLink />
-                <span>Live Demo</span>
-              </a>
-            )}
-            {project.githubUrl !== '#' && (
-              <a 
-                href={project.githubUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="project-action project-action--secondary"
-                title="View Source Code"
-              >
-                <FiGithub />
-                <span>Code</span>
-              </a>
-            )}
-          </div>
-          <div className="project-status-top">
-            <span className={`project-status-badge project-status-badge--${project.status}`}>
-              <FiPlay />
-              {project.status === 'live' ? 'Live' : 'In Development'}
-            </span>
-          </div>
-        </div>
-      )}
+      ) : null}
 
       <div className="project-content">
         <div className="project-header">
@@ -227,11 +192,6 @@ const Projects = () => {
             <h3 className="project-title">{project.title}</h3>
             <p className="project-subtitle">{project.subtitle}</p>
           </div>
-          {project.featured && (
-            <div className="project-featured-badge">
-              <FiStar />
-            </div>
-          )}
         </div>
 
         <p className="project-description">{project.description}</p>
