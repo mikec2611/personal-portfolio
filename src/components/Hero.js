@@ -55,31 +55,14 @@ const Hero = () => {
             </motion.h1>
 
             <motion.h2 className="hero__title" variants={itemVariants}>
-              <span className="hero__title-text">Data Analytics Professional</span>
+              <span className="hero__title-text">Data Analytics & Engineering Professional</span>
             </motion.h2>
 
-            <motion.p className="hero__description" variants={itemVariants}>
-              Accomplished data analytics leader and engineer with 10+ years of hands-on expertise 
-              building enterprise business intelligence applications, dashboards, and reports. 
-              Proven track record of leading high-impact analytics initiatives, managing technical teams, 
-              and delivering strategic outcomes through data-driven solutions.
-            </motion.p>
 
-            <motion.div className="hero__actions" variants={itemVariants}>
-              <a 
-                href="/resume.pdf" 
-                className="btn btn-primary btn-lg hero__resume"
-                download
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FiDownload />
-                Download Resume
-              </a>
-            </motion.div>
+
+
 
             <motion.div className="hero__social" variants={itemVariants}>
-              <span className="hero__social-label">Follow me:</span>
               <div className="hero__social-links">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -105,25 +88,7 @@ const Hero = () => {
 
         </motion.div>
 
-        <motion.div 
-          className="hero__scroll-indicator"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2 }}
-        >
-          <motion.div
-            className="hero__scroll-arrow"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ 
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          >
-            ↓
-          </motion.div>
-          <span className="hero__scroll-text">Scroll for more</span>
-        </motion.div>
+
       </div>
     </section>
   );

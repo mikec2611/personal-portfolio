@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiExternalLink, FiGithub, FiPlay, FiCode, FiMap, FiTrendingUp, FiStar, FiGlobe, FiMonitor } from 'react-icons/fi';
+import { FiExternalLink, FiGithub, FiCode, FiMap, FiTrendingUp, FiStar, FiGlobe, FiMonitor } from 'react-icons/fi';
 import { useInView } from 'react-intersection-observer';
 import './Projects.css';
 
@@ -158,10 +158,10 @@ const Projects = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="project-action project-action--primary"
-                title="View Live Demo"
+                title="Visit Site"
               >
                 <FiExternalLink />
-                <span>Live Demo</span>
+                <span>Visit Site</span>
               </a>
               {project.githubUrl !== '#' && (
                 <a 
@@ -175,12 +175,6 @@ const Projects = () => {
                   <span>Code</span>
                 </a>
               )}
-            </div>
-            <div className="project-status">
-              <span className={`project-status-badge project-status-badge--${project.status}`}>
-                <FiPlay />
-                {project.status === 'live' ? 'Live' : 'In Development'}
-              </span>
             </div>
           </div>
         </div>
@@ -232,25 +226,6 @@ const Projects = () => {
             Featured Projects
           </motion.h2>
 
-          <motion.p className="projects-intro" variants={itemVariants}>
-            A showcase of innovative projects combining data analytics, artificial intelligence, 
-            and interactive visualizations to solve real-world problems and deliver meaningful insights.
-          </motion.p>
-
-          {/* Category Filter */}
-          <motion.div className="projects-filter" variants={itemVariants}>
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                className={`filter-btn ${activeFilter === category.id ? 'filter-btn--active' : ''}`}
-                onClick={() => setActiveFilter(category.id)}
-              >
-                <category.icon />
-                {category.label}
-              </button>
-            ))}
-          </motion.div>
-
           {/* Projects Grid */}
           <motion.div 
             className="projects-grid" 
@@ -262,41 +237,7 @@ const Projects = () => {
             ))}
           </motion.div>
 
-          {/* Projects Summary */}
-          <motion.div className="projects-summary" variants={itemVariants}>
-            <div className="projects-summary-content">
-              <h3 className="projects-summary-title">Innovation Through Technology</h3>
-              <div className="projects-summary-stats">
-                <div className="projects-summary-stat">
-                  <FiGlobe className="projects-summary-icon" />
-                  <div className="projects-summary-stat-content">
-                    <span className="projects-summary-number">4</span>
-                    <span className="projects-summary-label">Total Projects</span>
-                  </div>
-                </div>
-                <div className="projects-summary-stat">
-                  <FiCode className="projects-summary-icon" />
-                  <div className="projects-summary-stat-content">
-                    <span className="projects-summary-number">10+</span>
-                    <span className="projects-summary-label">Technologies Used</span>
-                  </div>
-                </div>
-                <div className="projects-summary-stat">
-                  <FiTrendingUp className="projects-summary-icon" />
-                  <div className="projects-summary-stat-content">
-                    <span className="projects-summary-number">3</span>
-                    <span className="projects-summary-label">Different Domains</span>
-                  </div>
-                </div>
-              </div>
-              <p className="projects-summary-text">
-                These projects showcase my expertise in AI integration, data visualization, and 
-                full-stack development. From interactive mapping applications to AI-powered tools 
-                and modern web development, each project demonstrates technical excellence and 
-                user-focused design across diverse domains.
-              </p>
-            </div>
-          </motion.div>
+
         </motion.div>
       </div>
     </section>

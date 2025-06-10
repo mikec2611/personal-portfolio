@@ -1,7 +1,7 @@
 /* Global Variables */
 :root {
   /* Tech Theme - Flat Professional Palette */
-  --primary-color: #1a202c;      /* Deep tech navy */
+  --primary-color: #1371f6;      /* Deep tech navy */
   --primary-dark: #0f1419;       /* Darker navy for hovers */
   --primary-light: #2d3748;      /* Lighter tech gray */
   --secondary-color: #4a5568;     /* Tech gray */
@@ -96,46 +96,53 @@
   --container-2xl: 1536px;
 }
 
-/* Dark Mode Variables - Tech Dark Theme */
+/* Dark Mode Variables - Minimalistic Professional Theme */
 [data-theme="dark"] {
-  /* Tech dark mode colors - flat and modern */
-  --primary-color: #00d4ff;      /* Electric cyan as primary in dark */
-  --primary-dark: #00b8e6;       /* Darker cyan for hovers */
-  --primary-light: #33ddff;      /* Lighter cyan for accents */
-  --accent-color: #00f5a0;       /* Terminal green accent */
-  --accent-warm: #ff8c42;        /* Bright tech orange */
+  /* Refined minimal color palette - professional and sophisticated */
+  --primary-color: #5792e5;      /* Modern indigo for primary actions */
+  --primary-dark: #2f65d8;       /* Deeper indigo for hovers */
+  --primary-light: #8b5cf6;      /* Lighter purple for accents */
+  --accent-color: #06b6d4;       /* Professional cyan - more muted */
+  --accent-warm: #f59e0b;        /* Subtle amber for highlights */
+  --accent-green: #10b981;       /* Muted emerald green */
 
-  /* Dark theme background system - tech inspired */
-  --white: #0a0e14;              /* Deep tech background */
-  --gray-50: #1a202c;            /* Secondary background */
-  --gray-100: #2d3748;          /* Card backgrounds */
-  --gray-200: #4a5568;          /* Elevated surfaces */
-  --gray-300: #718096;          /* Borders and dividers */
-  --gray-400: #a0aec0;          /* Muted text */
-  --gray-500: #cbd5e0;          /* Secondary text */
-  --gray-600: #e2e8f0;          /* Primary text */
-  --gray-700: #f7fafc;          /* Headings */
-  --gray-800: #ffffff;          /* High contrast text */
+  /* Sophisticated dark background system - higher contrast for readability */
+  --white: #0a0a0b;              /* Deep charcoal background */
+  --gray-50: #161618;            /* Card/panel backgrounds */
+  --gray-100: #1f1f23;          /* Elevated surfaces */
+  --gray-200: #27272a;          /* Interactive elements */
+  --gray-300: #3f3f46;          /* Borders and dividers */
+  --gray-400: #71717a;          /* Muted text - better contrast */
+  --gray-500: #a1a1aa;          /* Secondary text */
+  --gray-600: #d4d4d8;          /* Primary text */
+  --gray-700: #e4e4e7;          /* Headings */
+  --gray-800: #f4f4f5;          /* High contrast text */
   --gray-900: #ffffff;          /* Maximum contrast */
 
-  /* Dark theme slate system - tech colors */
-  --slate-50: #0a0e14;          /* Deepest tech background */
-  --slate-100: #1a202c;         /* Panel backgrounds */
-  --slate-200: #2d3748;         /* Card surfaces */
-  --slate-300: #4a5568;         /* Interactive surfaces */
-  --slate-400: #718096;         /* Subtle borders */
-  --slate-500: #a0aec0;         /* Text muted */
-  --slate-600: #cbd5e0;         /* Text secondary */
-  --slate-700: #e2e8f0;         /* Text primary */
-  --slate-800: #f7fafc;         /* Headings */
-  --slate-900: #ffffff;         /* High contrast */
+  /* Consistent surface system for professional look */
+  --slate-50: #0f0f11;          /* Primary dark background */
+  --slate-100: #18181b;         /* Secondary backgrounds */
+  --slate-200: #27272a;         /* Card surfaces */
+  --slate-300: #3f3f46;         /* Interactive surfaces */
+  --slate-400: #52525b;         /* Subtle borders */
+  --slate-500: #71717a;         /* Text muted */
+  --slate-600: #a1a1aa;         /* Text secondary */
+  --slate-700: #d4d4d8;         /* Text primary */
+  --slate-800: #e4e4e7;         /* Headings */
+  --slate-900: #f8fafc;         /* High contrast */
 
-  /* Dark mode specific additions - tech surfaces */
-  --surface-primary: #1a202c;    /* Primary surface color */
-  --surface-secondary: #2d3748;  /* Secondary surface color */
-  --surface-elevated: #4a5568;   /* Elevated/hover surfaces */
-  --border-subtle: #2d3748;      /* Subtle borders */
-  --border-default: #4a5568;     /* Default borders */
+  /* Professional surface system - minimal and clean */
+  --surface-primary: #18181b;    /* Primary surface color */
+  --surface-secondary: #27272a;  /* Secondary surface color */
+  --surface-elevated: #3f3f46;   /* Elevated/hover surfaces - more subtle */
+  --border-subtle: #27272a;      /* Very subtle borders */
+  --border-default: #3f3f46;     /* Default borders - more defined */
+  
+  /* Professional shadow system for depth */
+  --shadow-dark-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --shadow-dark-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-dark-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  --shadow-dark-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
 }
 
 /* Reset and Base Styles */
@@ -217,7 +224,7 @@ a:hover {
 }
 
 .section {
-  padding: var(--spacing-20) 0;
+  padding: var(--spacing-12) 0;
 }
 
 .section-title {
@@ -263,25 +270,38 @@ a:hover {
   border: 1px solid var(--border-default);
 }
 
-/* Tech glow effects (subtle) */
+/* Minimal glow effects - very subtle */
 .tech-glow {
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.08);
 }
 
 [data-theme="dark"] .tech-glow {
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.15);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.12);
 }
 
-/* Flat card enhancements */
+/* Professional card styling */
 .tech-card {
   border: 1px solid var(--border-default);
   border-radius: var(--radius-lg);
   background: var(--white);
+  transition: all var(--transition-base);
+}
+
+.tech-card:hover {
+  border-color: var(--gray-300);
+  box-shadow: var(--shadow-md);
 }
 
 [data-theme="dark"] .tech-card {
   background: var(--surface-secondary);
   border-color: var(--border-subtle);
+  box-shadow: var(--shadow-dark-sm);
+}
+
+[data-theme="dark"] .tech-card:hover {
+  background: var(--surface-elevated);
+  border-color: var(--border-default);
+  box-shadow: var(--shadow-dark-md);
 }
 
 /* Buttons */
@@ -324,17 +344,17 @@ a:hover {
   transform: translateY(-2px);
 }
 
-/* Flat tech button styles for dark mode */
+/* Professional button styles for dark mode */
 [data-theme="dark"] .btn-primary {
   background: var(--primary-color);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-dark-sm);
   border: 2px solid var(--primary-color);
 }
 
 [data-theme="dark"] .btn-primary:hover {
   background: var(--primary-dark);
   border-color: var(--primary-dark);
-  box-shadow: 0 4px 8px rgba(0, 212, 255, 0.3);
+  box-shadow: var(--shadow-dark-md);
   color: var(--white);
 }
 
@@ -355,7 +375,7 @@ a:hover {
   font-size: var(--text-lg);
 }
 
-/* Cards */
+/* Cards - Professional minimal design */
 .card {
   background: var(--white);
   border-radius: var(--radius-xl);
@@ -366,20 +386,23 @@ a:hover {
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-xl);
+  border-color: var(--gray-300);
 }
 
-/* Enhanced card styles for dark mode */
+/* Professional dark mode card styling */
 [data-theme="dark"] .card {
   background: var(--surface-secondary);
   border-color: var(--border-subtle);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-dark-sm);
 }
 
 [data-theme="dark"] .card:hover {
   background: var(--surface-elevated);
-  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.4);
+  border-color: var(--border-default);
+  box-shadow: var(--shadow-dark-lg);
+  transform: translateY(-2px);
 }
 
 /* Responsive Grid */

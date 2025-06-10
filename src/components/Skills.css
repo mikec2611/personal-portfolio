@@ -5,7 +5,7 @@
 }
 
 [data-theme="dark"] .skills-section {
-  background: linear-gradient(135deg, var(--gray-800) 0%, var(--gray-900) 50%, var(--gray-800) 100%);
+  background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 40%, var(--white) 100%);
 }
 
 .skills-section::before {
@@ -85,13 +85,15 @@
 }
 
 [data-theme="dark"] .skills-filter {
-  background: var(--gray-800);
-  border-color: var(--gray-600);
-  color: var(--gray-300);
+  background: var(--surface-secondary);
+  border-color: var(--border-subtle);
+  color: var(--gray-500);
 }
 
 [data-theme="dark"] .skills-filter:hover {
+  background: var(--surface-elevated);
   border-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 /* Skills Grid */
@@ -154,8 +156,15 @@
 }
 
 [data-theme="dark"] .skill-card {
-  background: var(--gray-800);
-  border-color: var(--gray-700);
+  background: var(--surface-secondary);
+  border-color: var(--border-subtle);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .skill-card:hover {
+  background: var(--surface-elevated);
+  border-color: var(--border-default);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .skill-header {
@@ -337,8 +346,9 @@
 }
 
 [data-theme="dark"] .tech-highlights {
-  background: var(--gray-800);
-  border-color: var(--gray-700);
+  background: var(--surface-secondary);
+  border-color: var(--border-subtle);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .tech-highlights-title {
@@ -404,7 +414,15 @@
 }
 
 [data-theme="dark"] .tech-highlight {
-  background: var(--gray-700);
+  background: var(--surface-secondary);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .tech-highlight:hover {
+  background: var(--surface-elevated);
+  border-color: var(--border-default);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 .tech-highlight-icon {
