@@ -2,7 +2,7 @@
   "name": "personal-portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://mikec2611.github.io/personal-portfolio",
+  "homepage": "https://mikec.io",
   "description": "Modern personal portfolio website built with React",
   "dependencies": {
     "framer-motion": "^10.16.4",
