@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiCode, FiDatabase, FiCpu, FiBarChart2, FiUsers, FiBriefcase, FiTrendingUp, FiUserCheck, FiGlobe } from 'react-icons/fi';
+import { FiCode, FiDatabase, FiCpu, FiBarChart2, FiUsers, FiBriefcase, FiTrendingUp, FiGlobe } from 'react-icons/fi';
 import { useInView } from 'react-intersection-observer';
 import './Skills.css';
 
