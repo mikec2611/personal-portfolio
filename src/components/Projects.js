@@ -57,6 +57,28 @@ const Projects = () => {
     },
     {
       id: 3,
+      title: 'Drug Shortage Analysis Dashboard',
+      subtitle: 'Business Intelligence Dashboard for FDA Drug Shortage Data',
+      description: 'A comprehensive business intelligence dashboard that analyzes U.S. drug shortage and enforcement data sourced from the FDA, featuring AI-powered insights and interactive visualizations for healthcare professionals and analysts.',
+      category: 'ai',
+      tags: ['Python', 'Flask', 'PostgreSQL', 'AWS', 'D3.js', 'OpenAI GPT', 'FDA OpenFDA API', 'HTML/CSS', 'JavaScript'],
+      liveUrl: 'https://drug-shortage-analysis-mc2615.pythonanywhere.com/',
+      githubUrl: '#',
+      image: `${process.env.PUBLIC_URL}/images/drug-shortage-screenshot.jpg`,
+      features: [
+        'AI-powered drug shortage analysis and insights generation',
+        'Daily FDA data integration and automated monitoring',
+        'Interactive trend analysis and data visualizations',
+        'Company-specific filtering and deep-dive analysis capabilities',
+        'Geographic distribution mapping of drug shortages',
+        'Recall severity classification and comprehensive tracking'
+      ],
+      status: 'live',
+      featured: true,
+      color: '#ef4444'
+    },
+    {
+      id: 4,
       title: 'Personal Portfolio Website',
       subtitle: 'Modern React Portfolio with Advanced Features',
       description: 'A sophisticated personal portfolio website built with React, featuring modern animations, dark mode support, responsive design, and comprehensive skills showcase with interactive filtering.',
@@ -64,7 +86,7 @@ const Projects = () => {
       tags: ['React', 'JavaScript', 'CSS3', 'HTML5', 'Framer Motion', 'React Icons', 'GitHub Pages'],
       liveUrl: '#',
       githubUrl: '#',
-      image: null,
+      image: `${process.env.PUBLIC_URL}/images/portfolio-screenshot.jpg`,
       features: [
         'Modern React 18 with functional components and hooks',
         'Framer Motion animations and smooth transitions',
@@ -76,28 +98,6 @@ const Projects = () => {
       status: 'live',
       featured: true,
       color: '#7c3aed'
-    },
-    {
-      id: 4,
-      title: 'Job Application Tracker',
-      subtitle: 'AI-Powered Gmail Integration for Job Search Management',
-      description: 'An intelligent Python application that automatically connects to Gmail, identifies job application emails, and provides comprehensive organization and visualization of job search activities using AI-powered analysis.',
-      category: 'ai',
-      tags: ['Python', 'Gmail API', 'OpenAI API', 'Data Visualization', 'Automation', 'Email Processing'],
-      liveUrl: '#',
-      githubUrl: '#',
-      image: null,
-      features: [
-        'Automated Gmail integration with secure API authentication',
-        'AI-powered email classification and job application detection',
-        'Smart organization of applications by company, role, and status',
-        'Interactive visualizations of job search progress and metrics',
-        'Automated tracking of response rates and timeline analysis',
-        'Export capabilities for further analysis and reporting'
-      ],
-      status: 'completed',
-      featured: true,
-      color: '#ef4444'
     }
   ];
 

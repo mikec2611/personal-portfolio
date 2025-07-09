@@ -142,7 +142,7 @@
 /* Project Image */
 .project-image {
   position: relative;
-  height: 240px;
+  height: 280px;
   overflow: hidden;
   background: var(--gray-100);
 }
@@ -527,7 +527,7 @@
   }
 
   .project-image {
-    height: 200px;
+    height: 240px;
   }
 
   .project-content {
@@ -596,7 +596,7 @@
   }
 
   .project-image {
-    height: 180px;
+    height: 220px;
   }
 
   .project-overlay {
